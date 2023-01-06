@@ -2,10 +2,12 @@
     <div class="main">
         <div>
 
+           
+           
             <Formulario />
-            <ItemsTodo />
             <ItemsTodo/>
             <Empty />
+            
 
         </div>
     </div>
@@ -16,6 +18,9 @@
 import Empty from './Empty.vue';
 import Formulario from './Formulario.vue';
 import ItemsTodo from './ItemsTodo.vue';
+import axios from 'axios';
+
+
 
 
 export default {
@@ -24,7 +29,27 @@ export default {
         Formulario,
         ItemsTodo,
         Empty
+    },
+
+    data() {
+    return {
+       
     }
+},
+
+created() {
+    axios.get('http://localhost:3000/todos')
+    .then((response) => 
+    {
+        this.$store.commit('storeTodos', response.data)
+    }
+    
+    )
+    
+
+},
+
+
 
 }
 </script>
