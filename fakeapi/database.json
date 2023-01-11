@@ -19,26 +19,6 @@
       "id": 4,
       "title": "Estudar TypeScript",
       "completed": false
-    },
-    {
-      "title": "teste",
-      "completed": false,
-      "id": 5
-    },
-    {
-      "title": "teste",
-      "completed": false,
-      "id": 6
-    },
-    {
-      "title": "teste",
-      "completed": false,
-      "id": 7
-    },
-    {
-      "title": "teste",
-      "completed": false,
-      "id": 8
     }
   ]
 }

@@ -14,7 +14,8 @@
 
             <button 
             class="style-btn" 
-            type="submit">
+            type="submit"
+            @click="addTodo">
                 ADICIONAR
             </button>
         </form>
@@ -39,6 +40,8 @@ methods: {
         this.$store.dispatch('addTodo', {
             title: this.title,
             completed: false
+        }).finally(() => {
+            this.title = ''
         })
         
 

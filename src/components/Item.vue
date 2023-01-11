@@ -5,11 +5,15 @@
 
 
                 <div>
+                  
                     <input 
                     class="style-input" 
                     type="text"
                     placeholder="Digite a sua tarefa"
-                    :value="todo.title"/>
+                    :value="todo.title"
+                    @keyup.enter="updateTodo"
+
+                    />
                 </div>
                 <div class="btn-position">
                     <div>
@@ -24,7 +28,13 @@
                         </button>
                     </div>
                     <div>
-                        <button class="icon">
+                        <button 
+                        :class ="{
+                            'icon': isCompleted,
+                            'icon-is-complete': !isCompleted
+                        }"
+                        @click="onCheckClick"
+                        >
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -48,6 +58,21 @@ export default {
             type: Object,
             default: () => ({}),
         }
+    },
+    data() {
+        return {
+            isCompleted: this.todo.completed,
+        }
+    },
+
+    methods: {
+       
+
+        onCheckClick() {
+            this.isCompleted = !this.isCompleted
+        }
+
+        
     }
 }
 

@@ -73,10 +73,21 @@ export default {
     margin-top: 5px;
     margin-right: 5px;
     border: none;
-    background-color: #85FFBD;
-    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    background-color: #ce6464;
+    background-image: linear-gradient(45deg, #d65252 0%, #a76d78 100%);
     
 
+}
+
+.icon-is-complete {
+    width: 50px;
+    border-radius: 50px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: none;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    background-color: #85FFBD;
 }
 
 .check-tarefa {
